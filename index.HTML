@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>
+ChannelTube
+    </title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>
+MARINA - Froot
+    </h1>
+    <a href="clima.HTML">Ver el Clima</a>
+    <video width="720" height="640" id ="video1">
+    <source src="img/Marina.mp4" 
+    type="video/mp4">
+<source src="img/Marina.webm" type="video/webm">
+</video>
+        <div>
+            <button onclick="playPause()">&#9658;/II</button>
+            <button onclick="stop()">&#9726;</button>
+            <button onclick="skip(-5)">&lt;&lt;</button>
+            <button onclick="skip(+5)">&gt;&gt;</button>
+        </div>
+        <script>
+            var miVideo = document.getElementById("video1");
+            function playPause (){
+                if (miVideo.paused)
+                miVideo.play();
+                else miVideo.pause();
+              }
+       function stop() {
+           miVideo.pause();
+           miVideo.currentTime = 0;
+       }
+       function skip (value){
+           miVideo.currentTime +- value;
+       }
+        </script>
+</body>
+</html>
